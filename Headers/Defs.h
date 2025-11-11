@@ -1,0 +1,44 @@
+#define Width_4K 4096
+#define HEIGHT_4K 2160
+
+#define WIDTH_1440P 2560
+#define HEIGHT_1440P 1440
+
+#define WIDTH_1080P 1920
+#define HEIGHT_1080P 1080
+
+#define WIDTH_720P 1080
+#define HEIGHT_720P 720
+
+#define WIDTH_480P 720
+#define HEIGHT_480P 480
+
+#define WIDTH_360P 640
+#define HEIGHT_360P 360
+
+#define WIDTH_180P 320
+#define HEIGHT_180P 180
+
+#define FPS480 2.083333
+
+#define FPS360 2.777777
+
+#define FPS240 4.166666
+
+#define FPS180 5.555555
+
+#define FPS144 6.944444
+
+#define FPS120 8.333333
+
+#define FPS90 11.111111
+
+#define FPS60 16.666666
+
+#define FPS45 44.222222
+
+#define FPS30 33.333333
+
+#define FPS24 41.666666
+
+#define FPS15 66.666666
