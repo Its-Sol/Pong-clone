@@ -10,19 +10,21 @@
 #include <../Headers/Video.h>
 #include <../Headers/Defs.h>
 
-int main(){
+int main(void){
 	Game game = {
 		.renderer = NULL, 
 		.window = NULL,
 	};
 
-	sdl_init(Game *game, WIDTH_180P, HEIGHT_180P);
+	sdl_init(&game, WIDTH_180P, HEIGHT_180P);
 
 	/*
 	while(1){
 	game_physics();
 	game_controls();
 	}*/
+
+	SDL_Delay(3000);
 
 	return true;
 }

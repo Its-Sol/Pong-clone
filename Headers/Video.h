@@ -7,5 +7,5 @@ typedef struct{
 	SDL_Renderer *renderer;
 } Game;
 
-void sdl_init(struct Struct *game, int w_res, int h_res);
+void sdl_init(Game *game, int w_res, int h_res);
 #endif

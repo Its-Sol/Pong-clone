@@ -1,6 +1,9 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 
-void sdl_init(struct Game *game, int w_res, int h_res){
+#include <../Headers/Video.h>
+
+void sdl_init(Game *game, int w_res, int h_res){
 	if(SDL_Init(SDL_INIT_EVERYTHING)){
 		fprintf(stderr, "Error initializing SDL: %s\n", SDL_GetError());
        		exit(1);
@@ -14,13 +17,20 @@ void sdl_init(struct Game *game, int w_res, int h_res){
 
 	int min_w, min_h;
 	SDL_SetWindowMinimumSize(game->window, w_res, h_res);
-	SDL_GetWindowMinumumSize(game->window, &min_w, min_h);
+	SDL_GetWindowMinimumSize(game->window, &min_w, &min_h);
 
-	game->renderer = SDL_CreateRenderer(game->renderer, -1, 0)
+	game->renderer = SDL_CreateRenderer(game->window, -1, 0);
 	if(!game->renderer){
 		fprintf(stderr, "Error creating renderer: %s\n", SDL_GetError());
 		exit(1);
 	}
+
+	int img_init = IMG_Init(IMG_INIT_PNG);
+	if((img_init & IMG_INIT_PNG) != IMG_INIT_PNG){
+		fprintf(stderr, "Error initializing SDL_Image: %s\n", IMG_GetError());
+		exit(1);
+	}
+
 
 	SDL_Surface *app_icon = IMG_Load("../Art/Ball.png");
 	if(!app_icon){
