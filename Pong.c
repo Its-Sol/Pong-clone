@@ -9,6 +9,7 @@
 
 #include <../Headers/Video.h>
 #include <../Headers/Defs.h>
+#include <../Headers/Controls.h>
 
 int main(void){
 	Game game = {
@@ -16,15 +17,22 @@ int main(void){
 		.window = NULL,
 	};
 
-	sdl_init(&game, WIDTH_180P, HEIGHT_180P);
+	Player player1 = {
+		.keystate = NULL,
+	};
 
-	/*
+	sdl_init(&game);
+
 	while(1){
-	game_physics();
-	game_controls();
-	}*/
+	game_controls(&player1);
+
+	/*game_physics();*/
+
+	SDL_RenderClear(game.renderer);
+	SDL_RenderPresent(game.renderer);
 
 	SDL_Delay(3000);
+	}
 
 	return true;
 }

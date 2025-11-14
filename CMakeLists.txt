@@ -7,10 +7,9 @@ find_package(SDL2_image REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 
-add_executable(${PROJECT_NAME} Pong.c Video.c)
+add_executable(${PROJECT_NAME} Pong.c Video.c Controls.c)
 
-#ALSO later include Controls.c Physics.c Text.c Sound.c Enemy.c. OK so i think
-#that Text.c probably should be moved to Video.c, 
+#ALSO later include Physics.c Sound.c Enemy.c
 
 include_directories(${SDL2_INCLUDE_DIRS})
 target_include_directories(${PROJECT_NAME} PRIVATE

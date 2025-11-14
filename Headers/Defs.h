@@ -1,3 +1,7 @@
+#ifndef DEFS_h
+
+#define DEFS_h
+
 #define Width_4K 4096
 #define HEIGHT_4K 2160
 
@@ -42,3 +46,5 @@
 #define FPS24 41.666666
 
 #define FPS15 66.666666
+
+#endif

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/sol/Documents/Dev/Pong/Controls.c" "CMakeFiles/Pong.dir/Controls.c.o" "gcc" "CMakeFiles/Pong.dir/Controls.c.o.d"
   "/home/sol/Documents/Dev/Pong/Pong.c" "CMakeFiles/Pong.dir/Pong.c.o" "gcc" "CMakeFiles/Pong.dir/Pong.c.o.d"
   "/home/sol/Documents/Dev/Pong/Video.c" "CMakeFiles/Pong.dir/Video.c.o" "gcc" "CMakeFiles/Pong.dir/Video.c.o.d"
   )

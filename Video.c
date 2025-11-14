@@ -1,9 +1,21 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <stdlib.h>
 
 #include <../Headers/Video.h>
 
-void sdl_init(Game *game, int w_res, int h_res){
+void end_game(Game *game, int exit_status){
+
+	SDL_DestroyRenderer(game->renderer);
+	SDL_DestroyWindow(game->window);
+
+	SDL_Quit();
+
+	exit(exit_status);
+}
+
+void sdl_init(Game *game){
+	int w_res = 320, h_res = 180;
 	if(SDL_Init(SDL_INIT_EVERYTHING)){
 		fprintf(stderr, "Error initializing SDL: %s\n", SDL_GetError());
        		exit(1);
@@ -32,7 +44,7 @@ void sdl_init(Game *game, int w_res, int h_res){
 	}
 
 
-	SDL_Surface *app_icon = IMG_Load("../Art/Ball.png");
+	SDL_Surface *app_icon = IMG_Load("../Art/Logo.png");
 	if(!app_icon){
 		fprintf(stderr, "Error loading app icon: %s\n", IMG_GetError());
 	        exit(1);

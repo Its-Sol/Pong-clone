@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Pong.dir/Controls.c.o"
+  "CMakeFiles/Pong.dir/Controls.c.o.d"
   "CMakeFiles/Pong.dir/Pong.c.o"
   "CMakeFiles/Pong.dir/Pong.c.o.d"
   "CMakeFiles/Pong.dir/Video.c.o"

@@ -129,6 +129,30 @@ Pong/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/build
 .PHONY : Pong/fast
 
+Controls.o: Controls.c.o
+.PHONY : Controls.o
+
+# target to build an object file
+Controls.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Controls.c.o
+.PHONY : Controls.c.o
+
+Controls.i: Controls.c.i
+.PHONY : Controls.i
+
+# target to preprocess a source file
+Controls.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Controls.c.i
+.PHONY : Controls.c.i
+
+Controls.s: Controls.c.s
+.PHONY : Controls.s
+
+# target to generate assembly for a file
+Controls.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Controls.c.s
+.PHONY : Controls.c.s
+
 Pong.o: Pong.c.o
 .PHONY : Pong.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Pong"
+	@echo "... Controls.o"
+	@echo "... Controls.i"
+	@echo "... Controls.s"
 	@echo "... Pong.o"
 	@echo "... Pong.i"
 	@echo "... Pong.s"
